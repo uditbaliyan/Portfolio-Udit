@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera Course Recommendation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: blue;
+        }
+        h4 {
+            color: black;
+        }
+        form {
+            margin-top: 20px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+        h3 {
+            margin-top: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        h6 {
+            color: red;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Coursera Course Recommendation System</h2>
+
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="selected_course">Type or select a course you like:</label>
+        <select name="selected_course" id="selected_course">
+            {% for course in courses_list %}
+                <option value="{{ course }}">{{ course }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Show Recommended Courses</button>
+    </form>
+
+    {% if recommended_course_names %}
+        <h3>Recommended Courses based on your interests are:</h3>
+        <ul>
+            {% for course in recommended_course_names %}
+                <li>{{ course }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <h6>Copyright reserved by Coursera and Respective Course Owners</h6>
+</body>
+</html>

@@ -1,0 +1,174 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Udit Baliyan</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}"  /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Udit Baliyan<br />
+						PORTFOLIO</h1>
+						<p>Data Analyst well versed in SQL, Python, Pandas, Numpy, Matplotlib, Seaborn  <br /> <a href="https://www.linkedin.com/in/udit-baliyan-ab1162260/">Udit Baliyan</a>.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">PROJECTS</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="">PROJECTS</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/udit-baliyan-ab1162260/" class="icon brands fa-linkedin" target="_blank"><span class="label" >linkedin</span></a></li>
+							<li><a href="https://github.com/uditbaliyan" class="icon brands alt fa-github" target="_blank"><span class="label" >GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+				<div id="main">
+
+					<!-- Featured Post -->
+					<article class="post featured">
+						<header class="major">
+							<h2><a href="{% url 'breast_cancer' %}">Breast Cancer<br>Detection</a></h2>
+						</header>
+						<a href="{% url 'breast_cancer' %}" class="image main"><img src="{% static 'images/breast cancer pic.png' %}" alt="Breast Cancer Detection" /></a>
+						<ul class="actions special">
+							<li><a href="{% url 'breast_cancer' %}" class="button large">View Project</a></li>
+						</ul>
+					</article>
+				
+					<!-- Posts -->
+					<section class="posts">
+						<!-- <article>
+							<header>
+								<h2><a href="{% url 'generate_tts' %}">Text To Speech<br>Generator</a></h2>
+							</header>
+							<a href="{% url 'generate_tts' %}" class="image fit"><img src="{% static 'images/text-to-speech.jpg' %}" alt="Text to Speech Generator" /></a>
+							<p>The Text-to-Speech (TTS) generator project aims to create a web application that allows users to input text and convert it into spoken audio. The application uses a TTS engine to generate audio files from the input text, which can then be played back or downloaded by the user.</p>
+							<ul class="actions special">
+								<li><a href="{% url 'generate_tts' %}" class="button">View Project</a></li>
+							</ul>
+						</article>
+				
+						<article>
+							<header>
+								<h2><a href="{% url 'generate_qr' %}">QR<br>Generator</a></h2>
+							</header>
+							<a href="{% url 'generate_qr' %}" class="image fit"><img src="{% static 'images/qr-code-gen.jpg' %}" alt="QR Code Generator" /></a>
+							<p>The QR code generator project aims to create a web application that allows users to generate QR codes for any given input data. Users can enter data via a form, and the application will produce a downloadable QR code image.</p>
+							<ul class="actions special">
+								<li><a href="{% url 'generate_qr' %}" class="button">View Project</a></li>
+							</ul>
+						</article> -->
+				
+						<article>
+							<header>
+								<h2><a href="{% url 'heart' %}">Heart Attack<br>Prediction</a></h2>
+							</header>
+							<a href="{% url 'heart' %}" class="image fit"><img src="{% static 'images/heart.png' %}" alt="Heart Attack Prediction" /></a>
+							<p>This project predicts the likelihood of a heart attack based on various health parameters such as age, blood pressure, cholesterol levels, and more.</p>
+							<ul class="actions special">
+								<li><a href="{% url 'heart' %}" class="button">View Project</a></li>
+							</ul>
+						</article>
+				
+						<article>
+							<header>
+								<h2><a href="{% url 'diabetes' %}">Diabetes<br>Prediction</a></h2>
+							</header>
+							<a href="{% url 'diabetes' %}" class="image fit"><img src="{% static 'images/dprediction.png' %}" alt="Diabetes Prediction" /></a>
+							<p>This project predicts the likelihood of diabetes based on input features such as glucose levels, blood pressure, BMI, and more.</p>
+							<ul class="actions special">
+								<li><a href="{% url 'diabetes' %}" class="button">View Project</a></li>
+							</ul>
+						</article>
+				
+						<article>
+							<header>
+								<h2><a href="{% url 'index' %}">Books Recommendation<br>System</a></h2>
+							</header>
+							<a href="{% url 'index' %}" class="image fit"><img src="{% static 'images/book_rec.png' %}" alt="Books Recommendation System" /></a>
+							<p>This project recommends books to users based on their reading history and preferences.</p>
+							<ul class="actions special">
+								<li><a href="{% url 'index' %}" class="button">View Project</a></li>
+							</ul>
+						</article>
+				
+						<article>
+							<header>
+								<h2><a href="{% url 'recommend' %}">Movies Recommendation<br>System</a></h2>
+							</header>
+							<a href="{% url 'recommend' %}" class="image fit"><img src="{% static 'images/movie_rec.png' %}" alt="Movies Recommendation System" /></a>
+							<p>This project recommends movies to users based on their viewing history and preferences.</p>
+							<ul class="actions special">
+								<li><a href="{% url 'recommend' %}" class="button">View Project</a></li>
+							</ul>
+						</article>
+				
+						<article>
+							<header>
+								<h2><a href="{% url 'coursera_course_recommendation_system' %}">Coursera Course<br>Recommendation System</a></h2>
+							</header>
+							<a href="{% url 'coursera_course_recommendation_system' %}" class="image fit"><img src="{% static 'images/coursera.png' %}" alt="Coursera Course Recommendation System" /></a>
+							<p>This project recommends Coursera courses to users based on their interests and learning history.</p>
+							<ul class="actions special">
+								<li><a href="{% url 'coursera_course_recommendation_system' %}" class="button">View Project</a></li>
+							</ul>
+						</article>
+					</section>
+				
+				</div>
+				
+				<!-- Footer -->
+					<footer id="footer">
+
+						<section class="split contact">
+
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/udit-baliyan-ab1162260/" class="icon brands fa-linkedin" target="_blank"><span class="label" >linkedin</span></a></li>
+							<li><a href="https://github.com/uditbaliyan" class="icon brands alt fa-github" target="_blank"><span class="label" >GitHub</span></a></li>
+			
+											</ul>
+							</section>
+						</section>
+					</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}" ></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

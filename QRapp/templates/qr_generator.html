@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Dark mode background color */
+            color: #fff; /* Dark mode text color */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            padding: 8px 20px;
+            background-color: #007bff; /* Default button color */
+            color: #fff; /* Default button text color */
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3; /* Button color on hover */
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>QR Generator</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="qr_data">Enter Data:</label>
+            <input type="text" id="qr_data" name="qr_data">
+            <button type="submit">Generate QR Code</button>
+                    </form>
+        {% if qr_img %}
+        <button type="button"><a class="download-link" href="{{ qr_img }}" download>Download QR</a></button>
+
+        <h2>Generated QR Code:</h2>
+        <img src="{{ qr_img }}" alt="QR Code">
+        
+        {% endif %}
+    </div>
+</body>
+</html>
